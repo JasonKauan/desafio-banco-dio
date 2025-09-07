@@ -10,31 +10,51 @@ public class ContaTerminal {
 
 
         if (resposta.equalsIgnoreCase("s")){
-            pegarNome(scanner);
-            pegarCpf(scanner);
-            pegarNumero(scanner);
+            String nome = pegarNome(scanner);
+            int cpf = pegarCpf(scanner);
+            int numero = pegarNumero(scanner);
+
+            Cliente cliente = new Cliente(nome, cpf, numero);
+            Agencia agencia = new Agencia();
             
+            System.out.println("olá!"+ " " + cliente.nome + "obrigado por criar uma conta em nosso banco, sua agencia é " + agencia + " " + "seu saldo é de R$" + exibirSaldo()  );
+            
+        }else {
+            System.out.println("Tudo Bem!, encerrando o programa...");
         }
 
 
-      /**
+      scanner.close();
+    }
+
+       /**
        * metodos para pegar informações
        */
-    }
-    public static void pegarNome(Scanner scanner){
+    public static String pegarNome(Scanner scanner){
         System.out.println("por favor, insira o seu nome completo:\n");
-        String nomeCliente = scanner.nextLine();
-        System.out.println(nomeCliente);
+        return scanner.nextLine();
     }
-    public static void pegarCpf(Scanner scanner){
+
+
+    public static int pegarCpf(Scanner scanner){
         System.out.println("por favor, insira o seu CPF:\n");
         int cpfCliente = scanner.nextInt();
-        System.out.println(cpfCliente);
+        return cpfCliente;
     }
-    public static void pegarNumero(Scanner scanner){
+
+
+    public static int pegarNumero(Scanner scanner){
         System.out.println("por favor, insira o seu Número de Telefone:\n");
-        int numeroCliente = scanner.nextInt();
-        System.out.println(numeroCliente);    
+        int numeroCliente = scanner.nextInt();  
+        return numeroCliente; 
+     }
+
+     /**metodos para exibir informações  
+     * @return retorna o saldo*/
+
+     public static double exibirSaldo(){
+        double saldo = 237.48;
+        return saldo;
      }
     
 }
