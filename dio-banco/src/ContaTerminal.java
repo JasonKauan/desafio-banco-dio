@@ -17,7 +17,7 @@ public class ContaTerminal {
             Cliente cliente = new Cliente(nome, cpf, numero);
             Agencia agencia = new Agencia();
             
-            System.out.println("olá!"+ " " + cliente.nome + "obrigado por criar uma conta em nosso banco, sua agencia é " + agencia + " " + "seu saldo é de R$" + exibirSaldo()  );
+            System.out.println("olá!"+ "" + cliente.nome + " " + "obrigado por criar uma conta em nosso banco, sua agencia é " + agencia + " " + "seu saldo é de R$" + exibirSaldo()  );
             
         }else {
             System.out.println("Tudo Bem!, encerrando o programa...");

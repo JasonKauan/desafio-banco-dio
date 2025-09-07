@@ -1,10 +1,11 @@
 public class Cliente {
-    public Cliente(String nome, int cpf, int numero) {
-        //TODO Auto-generated constructor stub
-    }
     String nome;
-    String cpf;
-    String numero;
+    int cpf;
+    int numero;
 
- 
+    public Cliente(String nome, int cpf, int numero) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.numero = numero;
+    }
 }
